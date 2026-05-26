@@ -1,0 +1,59 @@
+<!--
+  COMPONENT: listings.html
+  Purpose: Featured Listings carousel — API-ready, tab-filtered
+  
+  HOW TO CONNECT YOUR API:
+  1. Open js/listings.js
+  2. Set LISTINGS_API_ENDPOINT to your API URL
+  3. Implement transformListing() to map your API fields to the card schema
+  4. See the full docs in listings.js comments
+  
+  The carousel auto-populates from the API when the page loads.
+  Tab filtering sends ?type=industrial (etc.) to the API, or filters client-side
+  depending on FILTER_MODE in listings.js.
+-->
+
+<section class="listings-section" aria-label="Featured Listings">
+  <div class="container">
+
+    <!-- Header row -->
+    <div class="listings-section__header">
+      <h2 class="listings-section__title">Featured Listings</h2>
+      <a href="/listings/all" class="arrow-link">View All Listings →</a>
+    </div>
+
+    <!-- Type filter tabs -->
+    <div class="listings-tabs" role="tablist" aria-label="Filter listings by type" id="listings-tabs">
+      <button class="listings-tab listings-tab--active" role="tab" aria-selected="true"  data-type="all">All</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="industrial">Industrial</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="retail">Retail</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="office">Office</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="multifamily">Multifamily</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="land">Land</button>
+      <button class="listings-tab" role="tab" aria-selected="false" data-type="investment">Investment</button>
+    </div>
+
+    <!-- Carousel -->
+    <div class="listings-carousel">
+      <button class="listings-carousel__btn listings-carousel__btn--prev" id="carousel-prev" aria-label="Previous listings">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="listings-carousel__track-wrap">
+        <!-- Cards injected here by listings.js -->
+        <div class="listings-carousel__track" id="listings-track">
+          <!-- Loading state shown until API responds -->
+          <div class="listings-loading" id="listings-loading">
+            <div class="listings-loading__spinner"></div>
+            Loading Listings...
+          </div>
+        </div>
+      </div>
+
+      <button class="listings-carousel__btn listings-carousel__btn--next" id="carousel-next" aria-label="Next listings">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>

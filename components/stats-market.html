@@ -1,0 +1,215 @@
+<!--
+  COMPONENT: stats-market.html
+  Purpose: Feature strip, key stats bar, and Missouri map + market trends
+  To customize: Edit stat numbers/labels, trend rows, and market copy text.
+  Stats are currently static — to make them live, connect to your API in listings.js
+  and call updateStats(data) with an object matching the stat data-key attributes.
+-->
+
+<!-- ===== Feature Strip ===== -->
+<section class="feature-strip" aria-label="Platform value propositions">
+  <div class="container">
+    <div class="feature-strip__inner">
+
+      <div class="feature-strip__item">
+        <!-- Building icon -->
+        <svg class="feature-strip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="9" width="18" height="12" rx="1"/><path d="M8 9V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4"/>
+          <line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/>
+        </svg>
+        <div class="feature-strip__text">
+          <div class="feature-strip__title">Accurate Listings</div>
+          <div class="feature-strip__sub">Real Time Data</div>
+        </div>
+      </div>
+
+      <div class="feature-strip__item">
+        <!-- Chart icon -->
+        <svg class="feature-strip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          <path d="M6 14 L12 8 L18 12"/><polyline points="18 10 22 6 18 6 18 10"/>
+        </svg>
+        <div class="feature-strip__text">
+          <div class="feature-strip__title">Market Insights</div>
+          <div class="feature-strip__sub">You Can Trust</div>
+        </div>
+      </div>
+
+      <div class="feature-strip__item">
+        <!-- Network/people icon -->
+        <svg class="feature-strip__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <div class="feature-strip__text">
+          <div class="feature-strip__title">Connect.</div>
+          <div class="feature-strip__sub">Collaborate. Close.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Key Stats Bar ===== -->
+<section class="stats-bar" aria-label="Platform statistics">
+  <div class="container">
+    <div class="stats-bar__inner">
+
+      <!-- Stat items: add data-key for JS to update values dynamically -->
+      <div class="stat-item">
+        <svg class="stat-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+        </svg>
+        <span class="stat-item__number" data-key="activeListings">8,642</span>
+        <span class="stat-item__label">Active Listings<br>Statewide</span>
+      </div>
+
+      <div class="stat-item">
+        <svg class="stat-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span class="stat-item__number" data-key="members">1,248</span>
+        <span class="stat-item__label">Brokerage Firms<br>&amp; Members</span>
+      </div>
+
+      <div class="stat-item">
+        <svg class="stat-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        <span class="stat-item__number" data-key="listingValue">$4.7B</span>
+        <span class="stat-item__label">Total Listing<br>Value</span>
+      </div>
+
+      <div class="stat-item">
+        <svg class="stat-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span class="stat-item__number" data-key="listingViews">39,127</span>
+        <span class="stat-item__label">Listing Views<br>This Month</span>
+      </div>
+
+      <div class="stat-item">
+        <svg class="stat-item__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="stat-item__number" data-key="marketReports">15</span>
+        <span class="stat-item__label">Market Reports<br>Updated Monthly</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Market Section ===== -->
+<section class="market-section" aria-label="Missouri Markets and Market Trends">
+
+  <!-- Left: Copy -->
+  <div class="market-copy">
+    <h2 class="market-copy__headline">Missouri Markets.<br>National Reach.</h2>
+    <p class="market-copy__body">Comprehensive coverage across Missouri's cities, counties, and submarkets with data that drives smarter decisions.</p>
+    <a href="/market-analytics" class="arrow-link">Explore Market Insights →</a>
+  </div>
+
+  <!-- Center: Missouri Map -->
+  <div class="market-map">
+    <svg class="market-map__svg" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Missouri market coverage map">
+      <defs>
+        <filter id="city-glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <radialGradient id="map-bg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(122,182,72,0.08)"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </radialGradient>
+      </defs>
+      <!-- Glow background -->
+      <ellipse cx="200" cy="160" rx="180" ry="140" fill="url(#map-bg)"/>
+      <!-- Missouri border (simplified) -->
+      <path d="M 60 40 L 340 40 L 350 60 L 345 100 L 355 130 L 350 160 L 340 190 L 310 260 L 280 300 L 200 315 L 160 310 L 110 290 L 75 260 L 45 220 L 40 180 L 50 150 L 45 110 L 55 75 Z"
+            fill="rgba(122,182,72,0.05)" stroke="#7ab648" stroke-width="2" filter="url(#city-glow)" opacity="0.8"/>
+
+      <!-- City dots and labels -->
+      <!-- Kansas City -->
+      <circle cx="80" cy="135" r="8" fill="rgba(122,182,72,0.2)" stroke="#7ab648" stroke-width="1.5"/>
+      <circle cx="80" cy="135" r="4" fill="#7ab648" filter="url(#city-glow)"/>
+      <text x="96" y="139" font-size="11" fill="#9cd45a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">KANSAS CITY</text>
+
+      <!-- St. Louis -->
+      <circle cx="318" cy="155" r="8" fill="rgba(122,182,72,0.2)" stroke="#7ab648" stroke-width="1.5"/>
+      <circle cx="318" cy="155" r="4" fill="#7ab648" filter="url(#city-glow)"/>
+      <text x="284" y="173" font-size="11" fill="#9cd45a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">ST. LOUIS</text>
+
+      <!-- Springfield -->
+      <circle cx="155" cy="260" r="6" fill="rgba(122,182,72,0.2)" stroke="#7ab648" stroke-width="1.5"/>
+      <circle cx="155" cy="260" r="3" fill="#7ab648" filter="url(#city-glow)"/>
+      <text x="166" y="265" font-size="10" fill="#9aaa8a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">SPRINGFIELD</text>
+
+      <!-- Columbia -->
+      <circle cx="215" cy="155" r="6" fill="rgba(122,182,72,0.2)" stroke="#7ab648" stroke-width="1.5"/>
+      <circle cx="215" cy="155" r="3" fill="#7ab648" filter="url(#city-glow)"/>
+      <text x="226" y="160" font-size="10" fill="#9aaa8a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">COLUMBIA</text>
+
+      <!-- St. Joseph -->
+      <circle cx="95" cy="70" r="5" fill="rgba(122,182,72,0.2)" stroke="#7ab648" stroke-width="1.5"/>
+      <circle cx="95" cy="70" r="2.5" fill="#7ab648" filter="url(#city-glow)"/>
+      <text x="106" y="74" font-size="9" fill="#9aaa8a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">ST. JOSEPH</text>
+
+      <!-- Joplin -->
+      <circle cx="80" cy="270" r="4" fill="#4a7a1e"/>
+      <text x="89" y="274" font-size="9" fill="#6a8a5a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">JOPLIN</text>
+
+      <!-- Jefferson City -->
+      <circle cx="195" cy="175" r="4" fill="#4a7a1e"/>
+      <text x="204" y="179" font-size="9" fill="#6a8a5a" font-family="Barlow Condensed, sans-serif" font-weight="700" letter-spacing="0.06em">JEFFERSON CITY</text>
+
+      <!-- Connection lines -->
+      <line x1="80" y1="135" x2="215" y2="155" stroke="rgba(122,182,72,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="215" y1="155" x2="318" y2="155" stroke="rgba(122,182,72,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="215" y1="155" x2="155" y2="260" stroke="rgba(122,182,72,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
+    </svg>
+  </div>
+
+  <!-- Right: Market Trends -->
+  <div class="market-trends">
+    <h3 class="market-trends__title">Market Trends</h3>
+
+    <!-- Trend rows: edit label, value, and direction (--up / --down) -->
+    <div class="trend-row">
+      <span class="trend-row__label">Industrial Vacancy Rate</span>
+      <span class="trend-row__value">
+        4.3%
+        <svg class="trend-row__arrow trend-row__arrow--down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-label="Decreasing"><polyline points="7 13 12 18 17 13"/></svg>
+      </span>
+    </div>
+    <div class="trend-row">
+      <span class="trend-row__label">Retail Vacancy Rate</span>
+      <span class="trend-row__value">
+        5.6%
+        <svg class="trend-row__arrow trend-row__arrow--down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-label="Decreasing"><polyline points="7 13 12 18 17 13"/></svg>
+      </span>
+    </div>
+    <div class="trend-row">
+      <span class="trend-row__label">Office Vacancy Rate</span>
+      <span class="trend-row__value">
+        12.1%
+        <svg class="trend-row__arrow trend-row__arrow--down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-label="Decreasing"><polyline points="7 13 12 18 17 13"/></svg>
+      </span>
+    </div>
+    <div class="trend-row">
+      <span class="trend-row__label">Market Cap Rate (Avg)</span>
+      <span class="trend-row__value">
+        7.2%
+        <svg class="trend-row__arrow trend-row__arrow--up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-label="Increasing"><polyline points="17 11 12 6 7 11"/></svg>
+      </span>
+    </div>
+
+    <div class="market-trends__cta">
+      <a href="/market-analytics/reports" class="arrow-link">View Full Market Report →</a>
+    </div>
+  </div>
+
+</section>

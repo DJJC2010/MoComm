@@ -1,0 +1,85 @@
+<!--
+  COMPONENT: footer.html
+  Purpose: Site footer with logo, quick links, social, contact
+  To customize: Edit link lists, contact info, and social links.
+-->
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <div class="footer__logo-mark">M<span>O</span>Comm</div>
+        <div class="footer__logo-sub">Missouri Commercial MLS</div>
+        <p class="footer__brand-desc">The Missouri Commercial Multiple Listing Service provides accurate, up-to-date commercial real estate data and tools for CRE professionals.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer__links">
+        <div class="footer__link-group">
+          <div class="footer__link-title">Quick Links</div>
+          <ul class="footer__link-list">
+            <li><a href="/about" class="footer__link">About Us</a></li>
+            <li><a href="/events" class="footer__link">Events</a></li>
+            <li><a href="/news" class="footer__link">News &amp; Updates</a></li>
+            <li><a href="/contact" class="footer__link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__link-group">
+          <div class="footer__link-title">&nbsp;</div>
+          <ul class="footer__link-list">
+            <li><a href="/training" class="footer__link">Training</a></li>
+            <li><a href="/support" class="footer__link">Support</a></li>
+            <li><a href="/terms" class="footer__link">Terms of Use</a></li>
+            <li><a href="/privacy" class="footer__link">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact + Social -->
+      <div class="footer__contact">
+        <div class="footer__contact-title">Connect With Us</div>
+        <div class="footer__social">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://facebook.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- X / Twitter -->
+          <a href="https://x.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://youtube.com" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d1a0d"/></svg>
+          </a>
+        </div>
+        <div class="footer__contact-info">
+          <a href="mailto:info@mocommercialmls.com">info@mocommercialmls.com</a><br>
+          <a href="tel:+15735550100">(573) 555-0100</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; <span id="footer-year"></span> Missouri Commercial MLS. All rights reserved.</p>
+      <nav class="footer__legal-links" aria-label="Legal">
+        <a href="/terms" class="footer__legal-link">Terms of Use</a>
+        <a href="/privacy" class="footer__legal-link">Privacy Policy</a>
+        <a href="/accessibility" class="footer__legal-link">Accessibility</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Auto-update copyright year
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>

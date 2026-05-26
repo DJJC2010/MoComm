@@ -1,0 +1,265 @@
+/* ============================================
+   Feature Strip (3-column value props)
+   ============================================ */
+
+.feature-strip {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-lg) 0;
+}
+
+.feature-strip__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.feature-strip__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  border-right: 1px solid var(--color-border);
+}
+
+.feature-strip__item:last-child {
+  border-right: none;
+}
+
+.feature-strip__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.feature-strip__text {}
+
+.feature-strip__title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.feature-strip__sub {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   Stats Bar
+   ============================================ */
+
+.stats-bar {
+  background: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-xl) 0;
+  /* Subtle rivet texture */
+  background-image:
+    radial-gradient(circle at 6px 6px, rgba(255,255,255,0.03) 2px, transparent 2px);
+  background-size: 60px 60px;
+}
+
+.stats-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-right: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.stat-item__number {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-item__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ============================================
+   Market Section (Map + Trends)
+   ============================================ */
+
+.market-section {
+  background: var(--color-secondary);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  min-height: 380px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Left: Copy panel */
+.market-copy {
+  background: #1a1a14;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-lg);
+  border-right: 1px solid var(--color-border);
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M0 20h40M20 0v40" stroke="rgba(122,182,72,0.04)" stroke-width="0.5"/></svg>');
+}
+
+.market-copy__headline {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: var(--color-accent);
+}
+
+.market-copy__body {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Center: Map */
+.market-map {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  background: radial-gradient(ellipse at center, rgba(122, 182, 72, 0.06) 0%, transparent 70%);
+}
+
+.market-map__svg {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Right: Market Trends */
+.market-trends {
+  padding: var(--space-xl);
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.market-trends__title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trend-row:last-of-type { border-bottom: none; }
+
+.trend-row__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.trend-row__value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.trend-row__arrow {
+  width: 14px;
+  height: 14px;
+}
+
+.trend-row__arrow--down { color: var(--color-accent); }
+.trend-row__arrow--up { color: #e05c4a; }
+
+.market-trends__cta {
+  margin-top: var(--space-md);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .stats-bar__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stat-item:nth-child(3) { border-right: none; }
+  .stat-item:nth-child(4),
+  .stat-item:nth-child(5) { border-top: 1px solid var(--color-border); }
+
+  .market-section {
+    grid-template-columns: 1fr;
+  }
+  .market-copy, .market-map, .market-trends {
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-strip__inner {
+    grid-template-columns: 1fr;
+  }
+  .feature-strip__item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .stats-bar__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,116 @@
+<!--
+  COMPONENT: nav.html
+  Purpose: Top utility bar + sticky main navigation
+  To customize: Edit nav items, dropdowns, logo text, and CTA link below.
+-->
+
+<!-- ===== Top Utility Bar ===== -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <nav class="topbar__actions">
+      <a href="/login" class="topbar__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Login
+      </a>
+      <div class="topbar__divider"></div>
+      <a href="/join" class="topbar__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+        Join Now
+      </a>
+      <div class="topbar__divider"></div>
+      <a href="/add-listing" class="topbar__link topbar__cta">Add / Manage Listing</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== Main Navigation ===== -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="MOComm — Missouri Commercial MLS Home">
+      <span class="nav__logo-mark">M<span>O</span>Comm</span>
+      <span class="nav__logo-sub">Missouri Commercial Multiple Listing Service</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="nav__menu" id="nav-menu" role="list">
+
+      <li class="nav__item">
+        <a href="/listings" class="nav__link">
+          Listings
+          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav__dropdown" role="list">
+          <li><a href="/listings/industrial" class="nav__dropdown-link">Industrial</a></li>
+          <li><a href="/listings/retail" class="nav__dropdown-link">Retail</a></li>
+          <li><a href="/listings/office" class="nav__dropdown-link">Office</a></li>
+          <li><a href="/listings/multifamily" class="nav__dropdown-link">Multifamily</a></li>
+          <li><a href="/listings/land" class="nav__dropdown-link">Land</a></li>
+          <li><a href="/listings/investment" class="nav__dropdown-link">Investment</a></li>
+          <li><a href="/listings/all" class="nav__dropdown-link">View All</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="/market-analytics" class="nav__link">
+          Market Analytics
+          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav__dropdown" role="list">
+          <li><a href="/market-analytics/reports" class="nav__dropdown-link">Market Reports</a></li>
+          <li><a href="/market-analytics/vacancy-rates" class="nav__dropdown-link">Vacancy Rates</a></li>
+          <li><a href="/market-analytics/cap-rates" class="nav__dropdown-link">Cap Rate Tracker</a></li>
+          <li><a href="/market-analytics/trends" class="nav__dropdown-link">Market Trends</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="/members" class="nav__link">
+          Members
+          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav__dropdown" role="list">
+          <li><a href="/members/directory" class="nav__dropdown-link">Member Directory</a></li>
+          <li><a href="/members/companies" class="nav__dropdown-link">Brokerage Firms</a></li>
+          <li><a href="/members/join" class="nav__dropdown-link">Become a Member</a></li>
+          <li><a href="/members/resources" class="nav__dropdown-link">Member Resources</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="/economic-development" class="nav__link">
+          Economic Development
+          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav__dropdown" role="list">
+          <li><a href="/economic-development/overview" class="nav__dropdown-link">Overview</a></li>
+          <li><a href="/economic-development/incentives" class="nav__dropdown-link">Incentives & Programs</a></li>
+          <li><a href="/economic-development/workforce" class="nav__dropdown-link">Workforce Data</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a href="/site-selection" class="nav__link">
+          Site Selection Tools
+          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav__dropdown" role="list">
+          <li><a href="/site-selection/demographics" class="nav__dropdown-link">Demographics</a></li>
+          <li><a href="/site-selection/traffic" class="nav__dropdown-link">Traffic Counts</a></li>
+          <li><a href="/site-selection/comparison" class="nav__dropdown-link">Market Comparison</a></li>
+          <li><a href="/site-selection/zoning" class="nav__dropdown-link">Zoning Maps</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <!-- Mobile Hamburger -->
+    <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>

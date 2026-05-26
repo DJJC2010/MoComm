@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <filter id="dg" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sg" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- State fill -->
+  <path d="M292.7,20.4 L300.0,20.0 L314.0,35.8 L321.6,38.4 L315.5,49.5 L316.3,65.3 L325.0,89.2 L346.3,109.3 L369.5,125.9 L374.0,151.5 L379.3,156.2 L387.3,149.0 L402.5,152.4 L412.4,157.9 L405.5,167.3 L407.4,174.6 L395.7,194.7 L395.3,207.0 L415.8,222.8 L423.4,233.1 L431.0,231.4 L453.4,248.0 L453.4,260.0 L459.1,274.9 L453.4,280.1 L469.0,302.3 L480.0,303.1 L474.3,334.7 L464.0,331.3 L460.2,341.1 L455.7,341.1 L451.9,341.1 L452.3,360.4 L438.6,380.0 L393.8,380.0 L404.8,365.5 L415.4,356.1 L409.3,341.1 L109.6,340.7 L99.8,340.7 L99.8,301.9 L100.1,133.6 L85.3,129.8 L74.3,111.4 L65.6,103.7 L81.2,81.1 L58.7,75.1 L51.9,67.8 L34.8,47.3 L20.0,22.1 L98.6,23.4 L194.0,22.6 L292.7,20.4 Z" fill="rgba(122,182,72,0.10)" stroke="none"/>
+
+  <!-- Border glow -->
+  <path d="M292.7,20.4 L300.0,20.0 L314.0,35.8 L321.6,38.4 L315.5,49.5 L316.3,65.3 L325.0,89.2 L346.3,109.3 L369.5,125.9 L374.0,151.5 L379.3,156.2 L387.3,149.0 L402.5,152.4 L412.4,157.9 L405.5,167.3 L407.4,174.6 L395.7,194.7 L395.3,207.0 L415.8,222.8 L423.4,233.1 L431.0,231.4 L453.4,248.0 L453.4,260.0 L459.1,274.9 L453.4,280.1 L469.0,302.3 L480.0,303.1 L474.3,334.7 L464.0,331.3 L460.2,341.1 L455.7,341.1 L451.9,341.1 L452.3,360.4 L438.6,380.0 L393.8,380.0 L404.8,365.5 L415.4,356.1 L409.3,341.1 L109.6,340.7 L99.8,340.7 L99.8,301.9 L100.1,133.6 L85.3,129.8 L74.3,111.4 L65.6,103.7 L81.2,81.1 L58.7,75.1 L51.9,67.8 L34.8,47.3 L20.0,22.1 L98.6,23.4 L194.0,22.6 L292.7,20.4 Z" fill="none" stroke="#7ab648" stroke-width="7" opacity="0.15" filter="url(#sg)"/>
+
+  <!-- Border -->
+  <path d="M292.7,20.4 L300.0,20.0 L314.0,35.8 L321.6,38.4 L315.5,49.5 L316.3,65.3 L325.0,89.2 L346.3,109.3 L369.5,125.9 L374.0,151.5 L379.3,156.2 L387.3,149.0 L402.5,152.4 L412.4,157.9 L405.5,167.3 L407.4,174.6 L395.7,194.7 L395.3,207.0 L415.8,222.8 L423.4,233.1 L431.0,231.4 L453.4,248.0 L453.4,260.0 L459.1,274.9 L453.4,280.1 L469.0,302.3 L480.0,303.1 L474.3,334.7 L464.0,331.3 L460.2,341.1 L455.7,341.1 L451.9,341.1 L452.3,360.4 L438.6,380.0 L393.8,380.0 L404.8,365.5 L415.4,356.1 L409.3,341.1 L109.6,340.7 L99.8,340.7 L99.8,301.9 L100.1,133.6 L85.3,129.8 L74.3,111.4 L65.6,103.7 L81.2,81.1 L58.7,75.1 L51.9,67.8 L34.8,47.3 L20.0,22.1 L98.6,23.4 L194.0,22.6 L292.7,20.4 Z" fill="none" stroke="#7ab648" stroke-width="1.8" opacity="0.9"/>
+
+  <!-- ST. JOSEPH -->
+  <circle cx="83.8" cy="86.0" r="13.5" fill="none" stroke="#7ab648" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="83.8" cy="86.0" r="8.5" fill="none" stroke="#7ab648" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="83.8" cy="86.0" r="4.5" fill="#7ab648" filter="url(#dg)" opacity="0.9"/>
+  <circle cx="83.8" cy="86.0" r="2.2" fill="#d4f0a0"/>
+  <text x="95.8" y="78.0" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" font-size="11" fill="#9cd45a" letter-spacing="0.07em" text-anchor="start">ST. JOSEPH</text>
+
+  <!-- KANSAS CITY -->
+  <circle cx="102.4" cy="138.2" r="15" fill="none" stroke="#7ab648" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="102.4" cy="138.2" r="10" fill="none" stroke="#7ab648" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="102.4" cy="138.2" r="6" fill="#7ab648" filter="url(#dg)" opacity="0.9"/>
+  <circle cx="102.4" cy="138.2" r="3" fill="#d4f0a0"/>
+  <text x="116.4" y="142.2" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" font-size="14" fill="#9cd45a" letter-spacing="0.07em" text-anchor="start">KANSAS CITY</text>
+
+  <!-- COLUMBIA -->
+  <circle cx="258.1" cy="149.7" r="13.5" fill="none" stroke="#7ab648" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="258.1" cy="149.7" r="8.5" fill="none" stroke="#7ab648" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="258.1" cy="149.7" r="4.5" fill="#7ab648" filter="url(#dg)" opacity="0.9"/>
+  <circle cx="258.1" cy="149.7" r="2.2" fill="#d4f0a0"/>
+  <text x="258.1" y="135.7" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" font-size="12" fill="#9cd45a" letter-spacing="0.07em" text-anchor="middle">COLUMBIA</text>
+
+  <!-- ST. LOUIS -->
+  <circle cx="406.2" cy="175.0" r="15" fill="none" stroke="#7ab648" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="406.2" cy="175.0" r="10" fill="none" stroke="#7ab648" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="406.2" cy="175.0" r="6" fill="#7ab648" filter="url(#dg)" opacity="0.9"/>
+  <circle cx="406.2" cy="175.0" r="3" fill="#d4f0a0"/>
+  <text x="392.2" y="167.0" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" font-size="14" fill="#9cd45a" letter-spacing="0.07em" text-anchor="end">ST. LOUIS</text>
+
+  <!-- SPRINGFIELD -->
+  <circle cx="191.6" cy="285.1" r="13.5" fill="none" stroke="#7ab648" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="191.6" cy="285.1" r="8.5" fill="none" stroke="#7ab648" stroke-width="0.7" opacity="0.3"/>
+  <circle cx="191.6" cy="285.1" r="4.5" fill="#7ab648" filter="url(#dg)" opacity="0.9"/>
+  <circle cx="191.6" cy="285.1" r="2.2" fill="#d4f0a0"/>
+  <text x="191.6" y="305.1" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" font-size="12" fill="#9cd45a" letter-spacing="0.07em" text-anchor="middle">SPRINGFIELD</text>
+</svg>

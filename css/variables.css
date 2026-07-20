@@ -4,19 +4,21 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #1a2a1a;         /* Deep forest green-black */
-  --color-secondary: #0d1a0d;       /* Near-black background */
-  --color-accent: #7ab648;          /* MOComm lime green */
-  --color-accent-bright: #9cd45a;   /* Hover lime */
-  --color-accent-muted: #4a7a1e;    /* Darker accent */
-  --color-text: #f0f0e8;            /* Off-white text */
-  --color-text-muted: #9aaa8a;      /* Muted green-grey */
-  --color-text-dark: #1a1a1a;       /* Dark text on light bg */
+  --color-primary: #1e3d1e;         /* Forest green (was near-black) */
+  --color-secondary: #163016;       /* Deep green page background */
+  --color-accent: #5cb85c;          /* Brighter, more saturated green */
+  --color-accent-bright: #6fcf6f;   /* Hover green */
+  --color-accent-muted: #3a8a3a;    /* Darker accent */
+  --color-text: #ffffff;            /* Pure white (was off-white) */
+  --color-text-muted: #a8c8a8;      /* Light green-tinted grey */
+  --color-text-dark: #0f2010;       /* Dark text on light bg */
   --color-white: #ffffff;
-  --color-surface: #1e2e1e;         /* Card/panel bg */
-  --color-surface-light: #243424;   /* Slightly lighter surface */
-  --color-border: #2e3e2e;
-  --color-border-light: rgba(122, 182, 72, 0.2);
+  --color-surface: #234d23;         /* Card/panel bg */
+  --color-surface-light: #2d5e2d;   /* Slightly lighter surface */
+  --color-border: #2e5a2e;
+  --color-border-light: rgba(92, 184, 92, 0.25);
+  --color-light-bg: #f5f7f5;
+  --color-light-surface: #ffffff;
 
   /* Typography */
   --font-display: 'Barlow Condensed', 'Impact', sans-serif;
@@ -44,7 +46,7 @@
 
   /* Shadows */
   --shadow-card: 0 4px 20px rgba(0,0,0,0.4);
-  --shadow-glow: 0 0 20px rgba(122, 182, 72, 0.15);
+  --shadow-glow: 0 0 20px rgba(92, 184, 92, 0.15);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -138,7 +140,7 @@ button {
 .btn--primary:hover {
   background: var(--color-accent-bright);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(122, 182, 72, 0.3);
+  box-shadow: 0 4px 12px rgba(92, 184, 92, 0.3);
 }
 
 .btn--outline {

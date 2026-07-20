@@ -3,8 +3,8 @@
    ============================================ */
 
 .feature-strip {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-light-bg);
+  border-bottom: 1px solid #dde8dd;
   padding: var(--space-lg) 0;
 }
 
@@ -41,7 +41,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-text);
+  color: #1a3a1a;
   line-height: 1.2;
 }
 
@@ -50,7 +50,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: #4a7a4a;
 }
 
 /* ============================================
@@ -58,12 +58,11 @@
    ============================================ */
 
 .stats-bar {
-  background: var(--color-primary);
+  background: #1e3d1e;
   border-bottom: 1px solid var(--color-border);
   padding: var(--space-xl) 0;
   /* Subtle rivet texture */
-  background-image:
-    radial-gradient(circle at 6px 6px, rgba(255,255,255,0.03) 2px, transparent 2px);
+  background-image: none;
   background-size: 60px 60px;
 }
 
@@ -117,7 +116,7 @@
    ============================================ */
 
 .market-section {
-  background: var(--color-secondary);
+  background: #ffffff;
   padding: 0;
   display: grid;
   grid-template-columns: 280px 1fr 280px;
@@ -127,13 +126,13 @@
 
 /* Left: Copy panel */
 .market-copy {
-  background: #1a1a14;
+  background: #f0f5f0;
   padding: var(--space-xl);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--space-lg);
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid #dde8dd;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="none"/><path d="M0 20h40M20 0v40" stroke="rgba(122,182,72,0.04)" stroke-width="0.5"/></svg>');
 }
 
@@ -144,12 +143,12 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.1;
-  color: var(--color-accent);
+  color: #1a3a1a;
 }
 
 .market-copy__body {
   font-size: 13px;
-  color: var(--color-text-muted);
+  color: #4a6a4a;
   line-height: 1.6;
 }
 
@@ -170,6 +169,8 @@
 
 /* Right: Market Trends */
 .market-trends {
+  background: #ffffff;
+  border-left: 1px solid #dde8dd;
   padding: var(--space-xl);
   border-left: 1px solid var(--color-border);
   display: flex;
@@ -184,7 +185,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: #1a3a1a;
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-sm);
   border-bottom: 1px solid var(--color-border);
@@ -195,7 +196,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid #e8f0e8;
 }
 
 .trend-row:last-of-type { border-bottom: none; }
@@ -205,7 +206,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: #4a6a4a;
 }
 
 .trend-row__value {
@@ -215,7 +216,7 @@
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 700;
-  color: var(--color-text);
+  color: #1a3a1a;
 }
 
 .trend-row__arrow {
